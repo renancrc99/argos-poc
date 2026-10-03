@@ -1,0 +1,79 @@
+services:
+  localstack:
+    image: localstack/localstack:3
+    ports:
+      - "4566:4566"
+    environment:
+      - SERVICES=s3
+      - DEFAULT_REGION=us-east-1
+      - EAGER_SERVICE_LOADING=1
+    volumes:
+      - localstack_data:/var/lib/localstack
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:4566/_localstack/health"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  infra-init:
+    image: amazon/aws-cli:latest
+    depends_on:
+      localstack:
+        condition: service_healthy
+    environment:
+      - AWS_ACCESS_KEY_ID=test
+      - AWS_SECRET_ACCESS_KEY=test
+      - AWS_DEFAULT_REGION=us-east-1
+    entrypoint: ["sh", "-c"]
+    command:
+      - |
+        aws --endpoint-url=http://localstack:4566 s3 mb s3://rag-platform-memvid || true
+        aws --endpoint-url=http://localstack:4566 s3 mb s3://rag-platform-docs || true
+        echo "Buckets created successfully"
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    depends_on:
+      infra-init:
+        condition: service_completed_successfully
+    environment:
+      - APP_ENV=local
+      - AWS_ENDPOINT_URL=http://localstack:4566
+      - AWS_ACCESS_KEY_ID=test
+      - AWS_SECRET_ACCESS_KEY=test
+      - AWS_DEFAULT_REGION=us-east-1
+      - EMBEDDING_ENABLED=true
+      - S3_BUCKET_NAME=rag-platform-docs
+      - MEMVID_CACHE_DIR=/app/cache
+      # LLM_PROVIDER: "ollama" (padrão) ou "anthropic"
+      - LLM_PROVIDER=${LLM_PROVIDER:-ollama}
+      - OLLAMA_BASE_URL=${OLLAMA_BASE_URL:-http://host.docker.internal:11434}
+      - OLLAMA_MODEL=${OLLAMA_MODEL:-qwen2.5:14b}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY:-}
+      - ANTHROPIC_MODEL=${ANTHROPIC_MODEL:-claude-sonnet-4-20250514}
+      - DATABASE_URL=sqlite:///data/agents.db
+      - LOG_LEVEL=DEBUG
+    volumes:
+      - ./backend/src:/app/src
+      - backend_data:/app/data
+      - memvid_cache:/app/cache
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    environment:
+      - VITE_API_BASE_URL=http://localhost:8000
+
+volumes:
+  localstack_data:
+  backend_data:
+  memvid_cache:
