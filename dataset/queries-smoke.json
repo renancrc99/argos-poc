@@ -1,0 +1,80 @@
+{
+  "queries": [
+    {
+      "id": "cdc-001",
+      "text": "Qual é o prazo para o consumidor desistir de uma compra realizada fora do estabelecimento comercial?",
+      "category": "factual",
+      "domain": "juridico",
+      "target_document": "cdc",
+      "relevant_passages": [
+        {
+          "document_id": "cdc",
+          "page": 35,
+          "offset_start": 39912,
+          "offset_end": 40204,
+          "relevance": 2,
+          "reference_quote": "Art. 49. O consumidor pode desistir do contrato, no prazo de 7 dias a contar de sua assinatura ou do ato de recebimento do produto ou serviço, sempre que a contratação de fornecimento de produtos e serviços ocorrer fora do estabelecimento comercial, especialmente por telefone ou a domicílio."
+        }
+      ]
+    },
+    {
+      "id": "lgpd-001",
+      "text": "Quais direitos o titular dos dados pessoais pode exercer perante o controlador?",
+      "category": "factual",
+      "domain": "juridico",
+      "target_document": "lgpd",
+      "relevant_passages": [
+        {
+          "document_id": "lgpd",
+          "page": 10,
+          "offset_start": 29037,
+          "offset_end": 29925,
+          "relevance": 2,
+          "reference_quote": "Art. 18. O titular dos dados pessoais tem direito a obter do controlador, em relação aos dados do titular por ele tratados, a qualquer momento e mediante requisição: I - confirmação da existência de tratamento; II - acesso aos dados; III - correção de dados incompletos, inexatos ou desatualizados; IV - anonimização, bloqueio ou eliminação de dados desnecessários, excessivos ou tratados em desconformidade com o disposto nesta Lei; V - portabilidade dos dados a outro fornecedor de serviço ou produto; VI - eliminação dos dados pessoais tratados com o consentimento do titular, exceto nas hipóteses previstas no art. 16 desta Lei; VII - informação das entidades públicas e privadas com as quais o controlador realizou uso compartilhado de dados; VIII - informação sobre a possibilidade de não fornecer consentimento e sobre as consequências da negativa; IX - revogação do consentimento."
+        }
+      ]
+    },
+    {
+      "id": "mei-001",
+      "text": "Qual é o limite de receita bruta anual para o MEI em geral?",
+      "category": "factual",
+      "domain": "atendimento",
+      "target_document": "mei",
+      "relevant_passages": [
+        {
+          "document_id": "mei",
+          "page": 4,
+          "offset_start": 8980,
+          "offset_end": 9348,
+          "relevance": 2,
+          "reference_quote": "auferir receita bruta acumulada nos anos-calendário anterior e em curso: para o MEI em geral: de até R$ 81.000,00 (oitenta e um mil reais) - no caso de início de atividade, o limite deve ser de R$ 6.750,00 (seis mil setecentos e cinquenta reais) multiplicados pelo número de meses compreendidos entre o mês de início de atividade e o final do respectivo ano-calendário"
+        }
+      ]
+    },
+    {
+      "id": "pix-001",
+      "text": "O que é uma chave Pix?",
+      "category": "factual",
+      "domain": "atendimento",
+      "target_document": "pix",
+      "relevant_passages": [
+        {
+          "document_id": "pix",
+          "page": null,
+          "offset_start": 789,
+          "offset_end": 1225,
+          "relevance": 2,
+          "reference_quote": "A chave Pix é um código que torna o processo de enviar e receber dinheiro muito mais fácil. Para enviar ou receber dinheiro, não será mais necessário informar todos os dados da conta. Basta informar a chave Pix cadastrada! A chave Pix pode ser seu CPF, telefone celular, e-mail, chave aleatória ou um QR Code (parecido com um código de barras). A chave aleatória é gerada automaticamente pela CAIXA, seguindo as regras do Banco Central."
+        }
+      ]
+    },
+    {
+      "id": "foratudo-001",
+      "text": "Qual é o valor disponível para saque-aniversário do FGTS este ano?",
+      "category": "fora_da_base",
+      "domain": "juridico",
+      "target_document": "cdc",
+      "relevant_passages": []
+    }
+  ]
+}
