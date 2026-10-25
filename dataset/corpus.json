@@ -1,0 +1,32 @@
+{
+  "documents": [
+    {
+      "id": "cdc",
+      "path": "corpus/cdc-portugues-2013.pdf",
+      "domain": "juridico",
+      "description": "Codigo de Defesa do Consumidor e legislacao correlata, compilacao da Camara dos Deputados (Lei 8.078/1990, Decreto 6.523/2008 sobre SAC, Decreto 7.962/2013 sobre comercio eletronico, entre outros).",
+      "content_type": "application/pdf"
+    },
+    {
+      "id": "lgpd",
+      "path": "corpus/lei-13709-14-agosto-2018-787077-normaatualizada-pl.pdf",
+      "domain": "juridico",
+      "description": "Lei n 13.709/2018 (Lei Geral de Protecao de Dados), texto atualizado.",
+      "content_type": "application/pdf"
+    },
+    {
+      "id": "mei",
+      "path": "corpus/perguntasmei.pdf",
+      "domain": "atendimento",
+      "description": "Perguntas e Respostas MEI e Simei, Secretaria-Executiva do Comite Gestor do Simples Nacional.",
+      "content_type": "application/pdf"
+    },
+    {
+      "id": "pix",
+      "path": "corpus/PIX FAQ.txt",
+      "domain": "atendimento",
+      "description": "Perguntas frequentes sobre o Pix, Caixa Economica Federal.",
+      "content_type": "text/plain"
+    }
+  ]
+}

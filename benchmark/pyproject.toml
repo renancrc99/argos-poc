@@ -1,0 +1,26 @@
+[project]
+name = "argos-benchmark"
+version = "0.1.0"
+description = "Ferramenta de benchmark do backend RAG — métricas de recuperação, resposta, desempenho e custo para a monografia."
+requires-python = ">=3.11"
+dependencies = [
+    "httpx>=0.27.0",
+    "pydantic>=2.9.0",
+    "scipy>=1.13.0",
+    "matplotlib>=3.9.0",
+    "psutil>=6.0.0",
+    "pyyaml>=6.0.0",
+]
+
+[project.optional-dependencies]
+# Só necessário para a avaliação de qualidade de resposta (seção 6 da especificação).
+# Isolado porque traz uma cadeia de dependências pesada (datasets/HF) que não deve
+# entrar na imagem de produção do backend nem no ambiente de uso diário da ferramenta.
+response-quality = [
+    "ragas>=0.2.0",
+    "openai>=1.40.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["benchmark*"]

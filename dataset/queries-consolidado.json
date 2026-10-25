@@ -1,0 +1,820 @@
+{
+  "queries": [
+    {
+      "id": "cdc-001",
+      "text": "Qual é o prazo para o consumidor desistir de uma compra realizada fora do estabelecimento comercial?",
+      "category": "factual",
+      "domain": "juridico",
+      "target_document": "cdc",
+      "relevant_passages": [
+        {
+          "document_id": "cdc",
+          "page": 35,
+          "offset_start": 39912,
+          "offset_end": 40204,
+          "relevance": 2,
+          "reference_quote": "Art. 49. O consumidor pode desistir do contrato, no prazo de 7 dias a contar de sua assinatura ou do ato de recebimento do produto ou serviço, sempre que a contratação de fornecimento de produtos e serviços ocorrer fora do estabelecimento comercial, especialmente por telefone ou a domicílio."
+        }
+      ]
+    },
+    {
+      "id": "cdc-002",
+      "text": "Em quantos dias o fornecedor deve sanar o vício do produto antes que o consumidor possa exigir outra solução?",
+      "category": "factual",
+      "domain": "juridico",
+      "target_document": "cdc",
+      "relevant_passages": [
+        {
+          "document_id": "cdc",
+          "page": 21,
+          "offset_start": 20388,
+          "offset_end": 20509,
+          "relevance": 2,
+          "reference_quote": "§ 1° Não sendo o vício sanado no prazo máximo de trinta dias, pode o consumidor exigir, alternativamente e à sua escolha:"
+        }
+      ]
+    },
+    {
+      "id": "cdc-003",
+      "text": "Qual é o prazo máximo para o SAC resolver uma reclamação do consumidor?",
+      "category": "factual",
+      "domain": "juridico",
+      "target_document": "cdc",
+      "relevant_passages": [
+        {
+          "document_id": "cdc",
+          "page": 123,
+          "offset_start": 162258,
+          "offset_end": 162429,
+          "relevance": 2,
+          "reference_quote": "Art. 17. As informações solicitadas pelo consumidor serão prestadas imediatamente e suas reclamações, resolvidas no prazo máximo de cinco dias úteis a contar do registro."
+        }
+      ]
+    },
+    {
+      "id": "cdc-004",
+      "text": "Comprei uma geladeira e ela veio com defeito. Quanto tempo eu tenho para reclamar?",
+      "category": "parafrase",
+      "domain": "juridico",
+      "target_document": "cdc",
+      "relevant_passages": [
+        {
+          "document_id": "cdc",
+          "page": 25,
+          "offset_start": 26017,
+          "offset_end": 26287,
+          "relevance": 2,
+          "reference_quote": "Art. 26. O direito de reclamar pelos vícios aparentes ou de fácil constatação caduca em: I - trinta dias, tratando-se de fornecimento de serviço e de produtos não duráveis; II - noventa dias, tratando-se de fornecimento de serviço e de produtos duráveis."
+        }
+      ]
+    },
+    {
+      "id": "cdc-005",
+      "text": "Fui cobrado a mais numa conta e já paguei. Tenho direito a receber algo além do valor que paguei errado?",
+      "category": "parafrase",
+      "domain": "juridico",
+      "target_document": "cdc",
+      "relevant_passages": [
+        {
+          "document_id": "cdc",
+          "page": 32,
+          "offset_start": 36535,
+          "offset_end": 36766,
+          "relevance": 2,
+          "reference_quote": "Parágrafo único. O consumidor cobrado em quantia indevida tem direito à repetição do indébito, por valor igual ao dobro do que pagou em excesso, acrescido de correção monetária e juros legais, salvo hipótese de engano justificável."
+        }
+      ]
+    },
+    {
+      "id": "cdc-006",
+      "text": "A empresa pode me obrigar, por contrato, a resolver qualquer problema em arbitragem em vez de ir à Justiça?",
+      "category": "parafrase",
+      "domain": "juridico",
+      "target_document": "cdc",
+      "relevant_passages": [
+        {
+          "document_id": "cdc",
+          "page": 36,
+          "offset_start": 41142,
+          "offset_end": 42097,
+          "relevance": 2,
+          "reference_quote": "Art. 51. São nulas de pleno direito, entre outras, as cláusulas contratuais relativas ao fornecimento de produtos e serviços que: I - impossibilitem, exonerem ou atenuem a responsabilidade do fornecedor por vícios de qualquer natureza dos produtos e serviços ou impliquem renúncia ou disposição de direitos. Nas relações de consumo entre o fornecedor e o consumidor pessoa jurídica, a indenização poderá ser limitada, em situações justificáveis; II - subtraiam ao consumidor a opção de reembolso da quantia já paga, nos casos previstos neste código; III - transfiram responsabilidades a terceiros; IV - estabeleçam obrigações consideradas iníquas, abusivas, que coloquem o consumidor em desvantagem exagerada, ou sejam incompatíveis com a boa-fé ou a eqüidade; V - (Vetado); VI - estabeleçam inversão do ônus da prova em prejuízo do consumidor; VII - determinem a utilização compulsória de arbitragem;"
+        }
+      ]
+    },
+    {
+      "id": "cdc-007",
+      "text": "O que estabelece o artigo 49 do Código de Defesa do Consumidor?",
+      "category": "termo_tecnico",
+      "domain": "juridico",
+      "target_document": "cdc",
+      "relevant_passages": [
+        {
+          "document_id": "cdc",
+          "page": 35,
+          "offset_start": 39912,
+          "offset_end": 40204,
+          "relevance": 2,
+          "reference_quote": "Art. 49. O consumidor pode desistir do contrato, no prazo de 7 dias a contar de sua assinatura ou do ato de recebimento do produto ou serviço, sempre que a contratação de fornecimento de produtos e serviços ocorrer fora do estabelecimento comercial, especialmente por telefone ou a domicílio."
+        }
+      ]
+    },
+    {
+      "id": "cdc-008",
+      "text": "Por quanto tempo as gravações das chamadas para o SAC devem ser mantidas, conforme o Decreto nº 6.523/2008?",
+      "category": "termo_tecnico",
+      "domain": "juridico",
+      "target_document": "cdc",
+      "relevant_passages": [
+        {
+          "document_id": "cdc",
+          "page": 123,
+          "offset_start": 161549,
+          "offset_end": 161731,
+          "relevance": 2,
+          "reference_quote": "§ 3º É obrigatória a manutenção da gravação das chamadas efetuadas para o SAC, pelo prazo mínimo de noventa dias, durante o qual o consumidor poderá requerer acesso ao seu conteúdo."
+        }
+      ]
+    },
+    {
+      "id": "cdc-009",
+      "text": "Qual é o prazo para o fornecedor sanar o vício do produto e quais alternativas o consumidor pode exigir se esse prazo não for cumprido?",
+      "category": "multi_trecho",
+      "domain": "juridico",
+      "target_document": "cdc",
+      "relevant_passages": [
+        {
+          "document_id": "cdc",
+          "page": 21,
+          "offset_start": 20388,
+          "offset_end": 20509,
+          "relevance": 2,
+          "reference_quote": "§ 1° Não sendo o vício sanado no prazo máximo de trinta dias, pode o consumidor exigir, alternativamente e à sua escolha:"
+        },
+        {
+          "document_id": "cdc",
+          "page": 22,
+          "offset_start": 20582,
+          "offset_end": 20841,
+          "relevance": 2,
+          "reference_quote": "I - a substituição do produto por outro da mesma espécie, em perfeitas condições de uso; II - a restituição imediata da quantia paga, monetariamente atualizada, sem prejuízo de eventuais perdas e danos; III - o abatimento proporcional do preço."
+        }
+      ]
+    },
+    {
+      "id": "cdc-010",
+      "text": "Quais são os prazos de decadência para reclamar de vícios aparentes e o prazo de prescrição para pedir reparação por danos causados pelo produto?",
+      "category": "multi_trecho",
+      "domain": "juridico",
+      "target_document": "cdc",
+      "relevant_passages": [
+        {
+          "document_id": "cdc",
+          "page": 25,
+          "offset_start": 26017,
+          "offset_end": 26287,
+          "relevance": 2,
+          "reference_quote": "Art. 26. O direito de reclamar pelos vícios aparentes ou de fácil constatação caduca em: I - trinta dias, tratando-se de fornecimento de serviço e de produtos não duráveis; II - noventa dias, tratando-se de fornecimento de serviço e de produtos duráveis."
+        },
+        {
+          "document_id": "cdc",
+          "page": 26,
+          "offset_start": 26943,
+          "offset_end": 27175,
+          "relevance": 2,
+          "reference_quote": "Art. 27. Prescreve em cinco anos a pretensão à reparação pelos danos causados por fato do produto ou do serviço prevista na Seção II deste Capítulo, iniciando-se a contagem do prazo a partir do conhecimento do dano e de sua autoria."
+        }
+      ]
+    },
+    {
+      "id": "lgpd-001",
+      "text": "Quais direitos o titular dos dados pessoais pode exercer perante o controlador?",
+      "category": "factual",
+      "domain": "juridico",
+      "target_document": "lgpd",
+      "relevant_passages": [
+        {
+          "document_id": "lgpd",
+          "page": 10,
+          "offset_start": 29037,
+          "offset_end": 29925,
+          "relevance": 2,
+          "reference_quote": "Art. 18. O titular dos dados pessoais tem direito a obter do controlador, em relação aos dados do titular por ele tratados, a qualquer momento e mediante requisição: I - confirmação da existência de tratamento; II - acesso aos dados; III - correção de dados incompletos, inexatos ou desatualizados; IV - anonimização, bloqueio ou eliminação de dados desnecessários, excessivos ou tratados em desconformidade com o disposto nesta Lei; V - portabilidade dos dados a outro fornecedor de serviço ou produto; VI - eliminação dos dados pessoais tratados com o consentimento do titular, exceto nas hipóteses previstas no art. 16 desta Lei; VII - informação das entidades públicas e privadas com as quais o controlador realizou uso compartilhado de dados; VIII - informação sobre a possibilidade de não fornecer consentimento e sobre as consequências da negativa; IX - revogação do consentimento."
+        }
+      ]
+    },
+    {
+      "id": "lgpd-002",
+      "text": "Em que hipóteses ocorre o término do tratamento de dados pessoais?",
+      "category": "factual",
+      "domain": "juridico",
+      "target_document": "lgpd",
+      "relevant_passages": [
+        {
+          "document_id": "lgpd",
+          "page": 9,
+          "offset_start": 27483,
+          "offset_end": 27950,
+          "relevance": 2,
+          "reference_quote": "Art. 15. O término do tratamento de dados pessoais ocorrerá nas seguintes hipóteses: I - verificação de que a finalidade foi alcançada ou de que os dados deixaram de ser necessários ou pertinentes ao alcance da finalidade específica almejada; II - fim do período de tratamento; III - comunicação do titular, inclusive no exercício de seu direito de revogação do consentimento; ou IV - determinação da autoridade nacional, quando houver violação ao disposto nesta Lei."
+        }
+      ]
+    },
+    {
+      "id": "lgpd-003",
+      "text": "O que o controlador deve fazer quando ocorre um incidente de segurança com dados pessoais?",
+      "category": "factual",
+      "domain": "juridico",
+      "target_document": "lgpd",
+      "relevant_passages": [
+        {
+          "document_id": "lgpd",
+          "page": 18,
+          "offset_start": 53844,
+          "offset_end": 54555,
+          "relevance": 2,
+          "reference_quote": "Art. 48. O controlador deverá comunicar à autoridade nacional e ao titular a ocorrência de incidente de segurança que possa acarretar risco ou dano relevante aos titulares. § 1º A comunicação será feita em prazo razoável, conforme definido pela autoridade nacional, e deverá mencionar, no mínimo: I - a descrição da natureza dos dados pessoais afetados; II - as informações sobre os titulares envolvidos; III - a indicação das medidas técnicas e de segurança utilizadas para a proteção dos dados; IV - os riscos relacionados ao incidente; V - os motivos da demora, no caso de a comunicação não ter sido imediata; e VI - as medidas que foram ou que serão adotadas para reverter ou mitigar os efeitos do prejuízo."
+        }
+      ]
+    },
+    {
+      "id": "lgpd-004",
+      "text": "Um cliente pediu para apagar todos os dados dele do meu sistema. Sou obrigado a atender esse pedido?",
+      "category": "parafrase",
+      "domain": "juridico",
+      "target_document": "lgpd",
+      "relevant_passages": [
+        {
+          "document_id": "lgpd",
+          "page": 10,
+          "offset_start": 29809,
+          "offset_end": 29937,
+          "relevance": 2,
+          "reference_quote": "VI - eliminação dos dados pessoais tratados com o consentimento do titular, exceto nas hipóteses previstas no art. 16 desta Lei;"
+        }
+      ]
+    },
+    {
+      "id": "lgpd-005",
+      "text": "Minha empresa precisa nomear alguém como responsável pela proteção de dados? O que essa pessoa faz?",
+      "category": "parafrase",
+      "domain": "juridico",
+      "target_document": "lgpd",
+      "relevant_passages": [
+        {
+          "document_id": "lgpd",
+          "page": 16,
+          "offset_start": 48358,
+          "offset_end": 49166,
+          "relevance": 2,
+          "reference_quote": "Art. 41. O controlador deverá indicar encarregado pelo tratamento de dados pessoais. § 1º A identidade e as informações de contato do encarregado deverão ser divulgadas publicamente, de forma clara e objetiva, preferencialmente no sítio eletrônico do controlador. § 2º As atividades do encarregado consistem em: I - aceitar reclamações e comunicações dos titulares, prestar esclarecimentos e adotar providências; II - receber comunicações da autoridade nacional e adotar providências; III - orientar os funcionários e os contratados da entidade a respeito das práticas a serem tomadas em relação à proteção de dados pessoais; e IV - executar as demais atribuições determinadas pelo controlador ou estabelecidas em normas complementares."
+        }
+      ]
+    },
+    {
+      "id": "lgpd-006",
+      "text": "Qual o valor máximo da multa que uma empresa pode receber por descumprir a lei de proteção de dados?",
+      "category": "parafrase",
+      "domain": "juridico",
+      "target_document": "lgpd",
+      "relevant_passages": [
+        {
+          "document_id": "lgpd",
+          "page": 19,
+          "offset_start": 59408,
+          "offset_end": 59670,
+          "relevance": 2,
+          "reference_quote": "II - multa simples, de até 2% (dois por cento) do faturamento da pessoa jurídica de direito privado, grupo ou conglomerado no Brasil no seu último exercício, excluídos os tributos, limitada, no total, a R$ 50.000.000,00 (cinquenta milhões de reais) por infração;"
+        }
+      ]
+    },
+    {
+      "id": "lgpd-007",
+      "text": "O que a Lei nº 13.709/2018 define como dado pessoal sensível?",
+      "category": "termo_tecnico",
+      "domain": "juridico",
+      "target_document": "lgpd",
+      "relevant_passages": [
+        {
+          "document_id": "lgpd",
+          "page": 2,
+          "offset_start": 5246,
+          "offset_end": 5549,
+          "relevance": 2,
+          "reference_quote": "II - dado pessoal sensível: dado pessoal sobre origem racial ou étnica, convicção religiosa, opinião política, filiação a sindicato ou a organização de caráter religioso, filosófico ou político, dado referente à saúde ou à vida sexual, dado genético ou biométrico, quando vinculado a uma pessoa natural;"
+        }
+      ]
+    },
+    {
+      "id": "lgpd-008",
+      "text": "Conforme o art. 8º da LGPD, de que forma o consentimento do titular deve ser fornecido?",
+      "category": "termo_tecnico",
+      "domain": "juridico",
+      "target_document": "lgpd",
+      "relevant_passages": [
+        {
+          "document_id": "lgpd",
+          "page": 5,
+          "offset_start": 15086,
+          "offset_end": 15771,
+          "relevance": 2,
+          "reference_quote": "Art. 8º O consentimento previsto no inciso I do art. 7º desta Lei deverá ser fornecido por escrito ou por outro meio que demonstre a manifestação de vontade do titular. § 1º Caso o consentimento seja fornecido por escrito, esse deverá constar de cláusula destacada das demais cláusulas contratuais. § 2º Cabe ao controlador o ônus da prova de que o consentimento foi obtido em conformidade com o disposto nesta Lei. § 3º É vedado o tratamento de dados pessoais mediante vício de consentimento. § 4º O consentimento deverá referir-se a finalidades determinadas, e as autorizações genéricas para o tratamento de dados pessoais serão nulas."
+        }
+      ]
+    },
+    {
+      "id": "lgpd-009",
+      "text": "O titular pode revogar o consentimento a qualquer momento e, se revogar, o que acontece com o tratamento dos dados dele?",
+      "category": "multi_trecho",
+      "domain": "juridico",
+      "target_document": "lgpd",
+      "relevant_passages": [
+        {
+          "document_id": "lgpd",
+          "page": 5,
+          "offset_start": 15784,
+          "offset_end": 15884,
+          "relevance": 2,
+          "reference_quote": "§ 5º O consentimento pode ser revogado a qualquer momento mediante manifestação expressa do titular."
+        },
+        {
+          "document_id": "lgpd",
+          "page": 9,
+          "offset_start": 27797,
+          "offset_end": 27975,
+          "relevance": 2,
+          "reference_quote": "III - comunicação do titular, inclusive no exercício de seu direito de revogação do consentimento conforme disposto no § 5º do art. 8º desta Lei, resguardado o interesse público;"
+        }
+      ]
+    },
+    {
+      "id": "lgpd-010",
+      "text": "Quais sanções administrativas a autoridade nacional pode aplicar e quais critérios ela leva em conta ao dosá-las?",
+      "category": "multi_trecho",
+      "domain": "juridico",
+      "target_document": "lgpd",
+      "relevant_passages": [
+        {
+          "document_id": "lgpd",
+          "page": 19,
+          "offset_start": 59058,
+          "offset_end": 59899,
+          "relevance": 2,
+          "reference_quote": "Art. 52. Os agentes de tratamento de dados, em razão das infrações cometidas às normas previstas nesta Lei, ficam sujeitos às seguintes sanções administrativas aplicáveis pela autoridade nacional: I - advertência, com indicação de prazo para adoção de medidas corretivas; II - multa simples, de até 2% (dois por cento) do faturamento da pessoa jurídica de direito privado, grupo ou conglomerado no Brasil no seu último exercício, excluídos os tributos, limitada, no total, a R$ 50.000.000,00 (cinquenta milhões de reais) por infração; III - multa diária, observado o limite total a que se refere o inciso II; IV - publicização da infração após devidamente apurada e confirmada a sua ocorrência; V - bloqueio dos dados pessoais a que se refere a infração até a sua regularização; VI - eliminação dos dados pessoais a que se refere a infração;"
+        },
+        {
+          "document_id": "lgpd",
+          "page": 20,
+          "offset_start": 61113,
+          "offset_end": 61738,
+          "relevance": 2,
+          "reference_quote": "§ 1º As sanções serão aplicadas após procedimento administrativo que possibilite a oportunidade da ampla defesa, de forma gradativa, isolada ou cumulativa, de acordo com as peculiaridades do caso concreto e considerados os seguintes parâmetros e critérios: I - a gravidade e a natureza das infrações e dos direitos pessoais afetados; II - a boa-fé do infrator; III - a vantagem auferida ou pretendida pelo infrator; IV - a condição econômica do infrator; V - a reincidência; VI - o grau do dano; VII - a cooperação do infrator;"
+        }
+      ]
+    },
+    {
+      "id": "mei-001",
+      "text": "Qual é o limite de receita bruta anual para o MEI em geral?",
+      "category": "factual",
+      "domain": "atendimento",
+      "target_document": "mei",
+      "relevant_passages": [
+        {
+          "document_id": "mei",
+          "page": 4,
+          "offset_start": 8980,
+          "offset_end": 9348,
+          "relevance": 2,
+          "reference_quote": "auferir receita bruta acumulada nos anos-calendário anterior e em curso: para o MEI em geral: de até R$ 81.000,00 (oitenta e um mil reais) - no caso de início de atividade, o limite deve ser de R$ 6.750,00 (seis mil setecentos e cinquenta reais) multiplicados pelo número de meses compreendidos entre o mês de início de atividade e o final do respectivo ano-calendário"
+        }
+      ]
+    },
+    {
+      "id": "mei-002",
+      "text": "Qual é o prazo para a entrega da DASN-Simei?",
+      "category": "factual",
+      "domain": "atendimento",
+      "target_document": "mei",
+      "relevant_passages": [
+        {
+          "document_id": "mei",
+          "page": 13,
+          "offset_start": 27669,
+          "offset_end": 27945,
+          "relevance": 2,
+          "reference_quote": "A Declaração Anual para o Microempreendedor Individual (DASN-Simei) deverá ser entregue até o último dia de maio de cada ano e conterá tão-somente: informação referente à receita bruta do ano-calendário anterior; informação referente à contratação de empregado, quando houver."
+        }
+      ]
+    },
+    {
+      "id": "mei-003",
+      "text": "Em quantas parcelas o MEI pode parcelar seus débitos na Receita Federal?",
+      "category": "factual",
+      "domain": "atendimento",
+      "target_document": "mei",
+      "relevant_passages": [
+        {
+          "document_id": "mei",
+          "page": 16,
+          "offset_start": 33187,
+          "offset_end": 33482,
+          "relevance": 2,
+          "reference_quote": "No parcelamento convencional, o número máximo de parcelas é 60 (sessenta). O valor mínimo de cada parcela é de R$ 50,00 (cinquenta reais). O aplicativo calcula a quantidade de parcelas de forma automática, considerando o maior número de parcelas possível, respeitado o valor da parcela mínima."
+        }
+      ]
+    },
+    {
+      "id": "mei-004",
+      "text": "Não faturei nada neste ano. Mesmo assim preciso pagar o boleto mensal?",
+      "category": "parafrase",
+      "domain": "atendimento",
+      "target_document": "mei",
+      "relevant_passages": [
+        {
+          "document_id": "mei",
+          "page": 12,
+          "offset_start": 23855,
+          "offset_end": 24209,
+          "relevance": 2,
+          "reference_quote": "Não. De qualquer modo, o MEI está obrigado a pagar o valor mensal previsto pelo Simei, porque esse valor é fixo e independe do exercício de atividade e do volume de receita. Vale dizer, a partir do momento em que o MEI for optante pelo Simei, ele deverá recolher os valores mencionados na Pergunta 3.1, ainda que esteja inativo ou que tenha receita zero."
+        }
+      ]
+    },
+    {
+      "id": "mei-005",
+      "text": "Vendi um produto para uma empresa. Sou obrigado a dar nota fiscal?",
+      "category": "parafrase",
+      "domain": "atendimento",
+      "target_document": "mei",
+      "relevant_passages": [
+        {
+          "document_id": "mei",
+          "page": 13,
+          "offset_start": 26868,
+          "offset_end": 27110,
+          "relevance": 2,
+          "reference_quote": "O MEI estará dispensado de emitir nota fiscal para consumidor pessoa física. Porém, estará obrigado à emissão quando o destinatário da mercadoria ou serviço for cadastrado no CNPJ, salvo quando esse destinatário emitir nota fiscal de entrada."
+        }
+      ]
+    },
+    {
+      "id": "mei-006",
+      "text": "Paguei um valor errado há algum tempo. Até quando ainda posso pedir esse dinheiro de volta?",
+      "category": "parafrase",
+      "domain": "atendimento",
+      "target_document": "mei",
+      "relevant_passages": [
+        {
+          "document_id": "mei",
+          "page": 19,
+          "offset_start": 38093,
+          "offset_end": 38185,
+          "relevance": 2,
+          "reference_quote": "Sim. A restituição deve ser solicitada em, no máximo, 5 anos, contados da data do pagamento."
+        }
+      ]
+    },
+    {
+      "id": "mei-007",
+      "text": "O que é o DTE-SN?",
+      "category": "termo_tecnico",
+      "domain": "atendimento",
+      "target_document": "mei",
+      "relevant_passages": [
+        {
+          "document_id": "mei",
+          "page": 6,
+          "offset_start": 14225,
+          "offset_end": 14651,
+          "relevance": 2,
+          "reference_quote": "O Domicílio Tributário Eletrônico do Simples Nacional (DTE-SN) é uma caixa postal eletrônica disponível no Portal do Simples Nacional, em que o MEI recebe intimações, notificações e avisos em geral, emitidos pelos entes federados. Ele pode ser utilizado para comunicar, p.ex.: indeferimento de opção pelo Simei, desenquadramento do Simei, autuações, decisões, avisos de autorregularização, intimações para esclarecimentos etc."
+        },
+        {
+          "document_id": "mei",
+          "page": 6,
+          "offset_start": 14653,
+          "offset_end": 14879,
+          "relevance": 2,
+          "reference_quote": "O DTE-SN não é uma escolha do contribuinte, mas um ônus da opção. Vale dizer: quem opta pelo Simei tem, automaticamente, o ônus legal de receber comunicações por esse meio. Não pode requerer que seja comunicado por outro meio."
+        }
+      ]
+    },
+    {
+      "id": "mei-008",
+      "text": "Qual é a multa prevista pelo descumprimento do prazo para transmitir a DASN-Simei?",
+      "category": "termo_tecnico",
+      "domain": "atendimento",
+      "target_document": "mei",
+      "relevant_passages": [
+        {
+          "document_id": "mei",
+          "page": 14,
+          "offset_start": 30198,
+          "offset_end": 30592,
+          "relevance": 2,
+          "reference_quote": "de 2% (dois por cento) ao mês-calendário ou fração, incidentes sobre o montante dos tributos declarados na DASN-Simei, ainda que integralmente pago, no caso de falta de entrega da declaração ou entrega após o prazo, limitada a 20% (vinte por cento), observada a multa mínima de R$ 50,00 (cinquenta reais); de R$ 100,00 (cem reais) para cada grupo de 10 (dez) informações incorretas ou omitidas."
+        }
+      ]
+    },
+    {
+      "id": "mei-009",
+      "text": "Quais tributos estão incluídos no Simei e de que formas o MEI pode pagá-los?",
+      "category": "multi_trecho",
+      "domain": "atendimento",
+      "target_document": "mei",
+      "relevant_passages": [
+        {
+          "document_id": "mei",
+          "page": 10,
+          "offset_start": 19824,
+          "offset_end": 20412,
+          "relevance": 2,
+          "reference_quote": "O MEI optante pelo Simei paga, por meio do Documento de Arrecadação (DAS), os seguintes tributos: contribuição previdenciária relativa à pessoa do empresário, na qualidade de contribuinte individual: para o MEI em geral: no valor de 5% (cinco por cento) do limite mínimo mensal do salário de contribuição; para o MEI transportador autônomo de cargas: no valor de 12% (doze por cento) do limite mínimo mensal do salário de contribuição; R$ 1,00 (um real), a título de ICMS, caso seja contribuinte desse imposto; R$ 5,00 (cinco reais), a título de ISS, caso seja contribuinte desse imposto."
+        },
+        {
+          "document_id": "mei",
+          "page": 11,
+          "offset_start": 21896,
+          "offset_end": 22315,
+          "relevance": 2,
+          "reference_quote": "O MEI emite o documento de arrecadação (o DASMEI) por meio: do respectivo Programa Gerador - PGMEI, do APP do MEI para celular ou do Totem Sebrae. Depois de emitido, o MEI paga o DASMEI na rede bancária ou numa agência lotérica. 2ª) Por meio de pagamento online: Dentro do PGMEI, o MEI pode pagar online. 3ª) Por meio de débito automático: No Portal do Simples Nacional, o MEI pode optar pelo serviço Débito Automático."
+        }
+      ]
+    },
+    {
+      "id": "mei-010",
+      "text": "Quais situações obrigam o MEI a comunicar o desenquadramento do Simei e qual é o prazo para fazer essa comunicação?",
+      "category": "multi_trecho",
+      "domain": "atendimento",
+      "target_document": "mei",
+      "relevant_passages": [
+        {
+          "document_id": "mei",
+          "page": 21,
+          "offset_start": 41704,
+          "offset_end": 41943,
+          "relevance": 2,
+          "reference_quote": "exceder no ano-calendário imediatamente anterior ou no ano-calendário em curso o limite de receita bruta previsto no § 1º do artigo 18-A da Lei Complementar nº 123, de 2006 (R$ 81.000,00 a partir de janeiro/2018);"
+        },
+        {
+          "document_id": "mei",
+          "page": 21,
+          "offset_start": 43410,
+          "offset_end": 43687,
+          "relevance": 2,
+          "reference_quote": "exceder no ano-calendário o limite de receita bruta previsto no § 1º do artigo 18-A da Lei Complementar nº 123, de 2006, devendo a comunicação ser efetuada até o último dia útil do mês subsequente àquele em que tenha ocorrido o excesso, produzindo efeitos:"
+        }
+      ]
+    },
+    {
+      "id": "pix-001",
+      "text": "O que é uma chave Pix?",
+      "category": "factual",
+      "domain": "atendimento",
+      "target_document": "pix",
+      "relevant_passages": [
+        {
+          "document_id": "pix",
+          "page": null,
+          "offset_start": 789,
+          "offset_end": 1225,
+          "relevance": 2,
+          "reference_quote": "A chave Pix é um código que torna o processo de enviar e receber dinheiro muito mais fácil. Para enviar ou receber dinheiro, não será mais necessário informar todos os dados da conta. Basta informar a chave Pix cadastrada! A chave Pix pode ser seu CPF, telefone celular, e-mail, chave aleatória ou um QR Code (parecido com um código de barras). A chave aleatória é gerada automaticamente pela CAIXA, seguindo as regras do Banco Central."
+        }
+      ]
+    },
+    {
+      "id": "pix-002",
+      "text": "Em quanto tempo é possível pedir a devolução de um Pix?",
+      "category": "factual",
+      "domain": "atendimento",
+      "target_document": "pix",
+      "relevant_passages": [
+        {
+          "document_id": "pix",
+          "page": null,
+          "offset_start": 2491,
+          "offset_end": 2625,
+          "relevance": 2,
+          "reference_quote": "Sim. A devolução é uma funcionalidade disponível no Pix, desde que iniciada por quem recebeu o dinheiro, dentro do período de 90 dias."
+        }
+      ]
+    },
+    {
+      "id": "pix-003",
+      "text": "Preciso me cadastrar para usar o Pix?",
+      "category": "factual",
+      "domain": "atendimento",
+      "target_document": "pix",
+      "relevant_passages": [
+        {
+          "document_id": "pix",
+          "page": null,
+          "offset_start": 326,
+          "offset_end": 728,
+          "relevance": 2,
+          "reference_quote": "Não. Para enviar ou receber um Pix, você precisa ter uma conta bancária. Porém, para deixar tudo mais fácil, você pode cadastrar uma chave Pix, que é um código que você utilizará durante as suas transações. A chave Pix pode ser seu CPF, telefone celular, e-mail, chave aleatória ou um QR Code. Você cadastra suas chaves Pix no aplicativo CAIXA ou CAIXA Tem ou no Internet Banking CAIXA pelo computador."
+        }
+      ]
+    },
+    {
+      "id": "pix-004",
+      "text": "Mandei dinheiro para a pessoa errada. Dá para reverter a transferência?",
+      "category": "parafrase",
+      "domain": "atendimento",
+      "target_document": "pix",
+      "relevant_passages": [
+        {
+          "document_id": "pix",
+          "page": null,
+          "offset_start": 2491,
+          "offset_end": 2625,
+          "relevance": 2,
+          "reference_quote": "Sim. A devolução é uma funcionalidade disponível no Pix, desde que iniciada por quem recebeu o dinheiro, dentro do período de 90 dias."
+        }
+      ]
+    },
+    {
+      "id": "pix-005",
+      "text": "Não reconheço uma transferência que saiu da minha conta. O que eu faço?",
+      "category": "parafrase",
+      "domain": "atendimento",
+      "target_document": "pix",
+      "relevant_passages": [
+        {
+          "document_id": "pix",
+          "page": null,
+          "offset_start": 3492,
+          "offset_end": 3919,
+          "relevance": 2,
+          "reference_quote": "Caso você desconheça uma transação Pix enviada de sua conta, você pode contestar nos aplicativos App CAIXA ou CAIXA Tem. Abra seu aplicativo no Menu Pix, ou dentro do extrato Pix, encontre a transação que quer contestar e é só clicar no botão de contestação e seguir as instruções. Se preferir, ligue no 0800 726 0101 ou vá a qualquer agência CAIXA para realizar o procedimento de contestação de movimentação Pix na sua conta."
+        }
+      ]
+    },
+    {
+      "id": "pix-006",
+      "text": "Quero trazer minha chave que está em outro banco para a CAIXA. Como isso funciona?",
+      "category": "parafrase",
+      "domain": "atendimento",
+      "target_document": "pix",
+      "relevant_passages": [
+        {
+          "document_id": "pix",
+          "page": null,
+          "offset_start": 3981,
+          "offset_end": 4347,
+          "relevance": 2,
+          "reference_quote": "Você pode fazer portabilidade (transferir) as chaves Pix que tenha cadastrado em outro banco para sua conta na CAIXA e vice-versa. A portabilidade deve ser solicitada na instituição onde você deseja fazer o registro e depois deve ser confirmada na instituição que irá enviar as chaves de origem. Você tem até 7 dias para confirmar a portabilidade, quando solicitada."
+        }
+      ]
+    },
+    {
+      "id": "pix-007",
+      "text": "O que é a solução Mobile Forte e para que ela serve?",
+      "category": "termo_tecnico",
+      "domain": "atendimento",
+      "target_document": "pix",
+      "relevant_passages": [
+        {
+          "document_id": "pix",
+          "page": null,
+          "offset_start": 4848,
+          "offset_end": 5287,
+          "relevance": 2,
+          "reference_quote": "Sim! Caso você utilize o app CAIXA para enviar Pix, você pode aumentar o limite diário aderindo à solução Mobile Forte. Basta fazer a adesão no aplicativo CAIXA pelo seu smartphone e concluir o processo de habilitação um caixa eletrônico ou na sua agência de relacionamento. Fique ligado: os limites diários aumentados por meio da adesão ao Mobile Forte podem ser utilizados em transações Pix realizadas apenas pelo smartphone cadastrado."
+        }
+      ]
+    },
+    {
+      "id": "pix-008",
+      "text": "Conforme a Resolução BACEN nº 142/21, em quanto tempo são processados os pedidos de alteração de limite do Pix?",
+      "category": "termo_tecnico",
+      "domain": "atendimento",
+      "target_document": "pix",
+      "relevant_passages": [
+        {
+          "document_id": "pix",
+          "page": null,
+          "offset_start": 6722,
+          "offset_end": 6931,
+          "relevance": 2,
+          "reference_quote": "Sim! Caso você utilize o app CAIXA para enviar Pix, você pode aumentar o limite diário para contas ou chaves pré-determinadas. Conforme a Resolução BACEN nº 142/21 os pedidos serão processados entre 24h e 48h."
+        }
+      ]
+    },
+    {
+      "id": "pix-009",
+      "text": "Qual é o limite diurno do Pix para pessoa jurídica e em quantos dias preciso confirmar uma portabilidade de chave?",
+      "category": "multi_trecho",
+      "domain": "atendimento",
+      "target_document": "pix",
+      "relevant_passages": [
+        {
+          "document_id": "pix",
+          "page": null,
+          "offset_start": 5986,
+          "offset_end": 6145,
+          "relevance": 2,
+          "reference_quote": "Período Diurno Podendo compreender das 06h às 20h ou 06h às 22h Pessoa Física a partir de R$3.000 a partir de R$10.000 R$1.200 Pessoa Jurídica R$5.000 R$60.000"
+        },
+        {
+          "document_id": "pix",
+          "page": null,
+          "offset_start": 4277,
+          "offset_end": 4347,
+          "relevance": 2,
+          "reference_quote": "Você tem até 7 dias para confirmar a portabilidade, quando solicitada."
+        }
+      ]
+    },
+    {
+      "id": "pix-010",
+      "text": "Como faço para aumentar meu limite diário do Pix e o que preciso fazer no caixa eletrônico para validar o dispositivo?",
+      "category": "multi_trecho",
+      "domain": "atendimento",
+      "target_document": "pix",
+      "relevant_passages": [
+        {
+          "document_id": "pix",
+          "page": null,
+          "offset_start": 4848,
+          "offset_end": 5122,
+          "relevance": 2,
+          "reference_quote": "Sim! Caso você utilize o app CAIXA para enviar Pix, você pode aumentar o limite diário aderindo à solução Mobile Forte. Basta fazer a adesão no aplicativo CAIXA pelo seu smartphone e concluir o processo de habilitação um caixa eletrônico ou na sua agência de relacionamento."
+        },
+        {
+          "document_id": "pix",
+          "page": null,
+          "offset_start": 5603,
+          "offset_end": 5781,
+          "relevance": 2,
+          "reference_quote": "Insira o cartão da conta Selecione “Desbloqueio de Celular/Computador” Digite no nº do dispositivo que deseja validar Selecione “Confirmar” Pronto! Seu dispositivo está validado."
+        }
+      ]
+    },
+    {
+      "id": "foratudo-001",
+      "text": "Qual é o valor disponível para saque-aniversário do FGTS este ano?",
+      "category": "fora_da_base",
+      "domain": "juridico",
+      "target_document": "cdc",
+      "relevant_passages": []
+    },
+    {
+      "id": "foratudo-002",
+      "text": "Como solicito a segunda via da carteira de identidade?",
+      "category": "fora_da_base",
+      "domain": "juridico",
+      "target_document": "cdc",
+      "relevant_passages": []
+    },
+    {
+      "id": "foratudo-003",
+      "text": "Quais são os requisitos para obter visto de trabalho no Canadá?",
+      "category": "fora_da_base",
+      "domain": "juridico",
+      "target_document": "lgpd",
+      "relevant_passages": []
+    },
+    {
+      "id": "foratudo-004",
+      "text": "Como funciona o rodízio de veículos na cidade de São Paulo?",
+      "category": "fora_da_base",
+      "domain": "juridico",
+      "target_document": "lgpd",
+      "relevant_passages": []
+    },
+    {
+      "id": "foratudo-005",
+      "text": "Qual é o prazo de validade de um extintor de incêndio veicular?",
+      "category": "fora_da_base",
+      "domain": "atendimento",
+      "target_document": "mei",
+      "relevant_passages": []
+    },
+    {
+      "id": "foratudo-006",
+      "text": "Quais vacinas são obrigatórias para viagem internacional?",
+      "category": "fora_da_base",
+      "domain": "atendimento",
+      "target_document": "mei",
+      "relevant_passages": []
+    },
+    {
+      "id": "foratudo-007",
+      "text": "Como se calcula o adicional de periculosidade previsto na CLT?",
+      "category": "fora_da_base",
+      "domain": "atendimento",
+      "target_document": "pix",
+      "relevant_passages": []
+    },
+    {
+      "id": "foratudo-008",
+      "text": "Qual foi a nota de corte do Enem para medicina no último ano?",
+      "category": "fora_da_base",
+      "domain": "atendimento",
+      "target_document": "pix",
+      "relevant_passages": []
+    }
+  ]
+}
