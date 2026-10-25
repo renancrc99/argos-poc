@@ -46,13 +46,15 @@ corpus a cada configuração.
 ## 2. O que está neste repositório
 
 ```
-rag-platform-poc/
+argos-poc/
 ├─ docker-compose.yml          4 serviços: localstack, infra-init, backend, frontend
+├─ REPRODUZIR-EXPERIMENTO.md   este guia
 ├─ dataset/
 │  ├─ corpus/                  os 4 documentos do corpus, como foram ingeridos
 │  ├─ corpus.json              manifesto do corpus
 │  ├─ queries-consolidado.json 48 consultas para a condição consolidada
 │  ├─ queries-segmentado.json  48 consultas para a condição segmentada
+│  ├─ queries-smoke.json       5 consultas, para o teste de fumaça (ver 3.5)
 │  └─ benchmark-perguntas.jsonl  conjunto de origem, legível por humanos
 └─ benchmark/
    ├─ run_experimento.py       orquestrador das duas condições
@@ -112,6 +114,24 @@ acrescentadas com `--configs A B C D E F`.
 
 ## 3. Passo a passo
 
+> **Convenções de terminal.** Todos os comandos deste guia estão escritos com **barra
+> normal** (`/`) nos caminhos e em **uma única linha**. Nessa forma, são idênticos em
+> PowerShell, Prompt de Comando, Git Bash, WSL, Linux e macOS — basta copiar e colar.
+> As diferenças aparecem apenas quando se quer quebrar um comando longo em várias linhas
+> ou definir variáveis de ambiente:
+>
+> | | PowerShell / Prompt de Comando | Git Bash / WSL / Linux / macOS |
+> |---|---|---|
+> | Separador de caminho | `dataset/corpus.json` ou `dataset\corpus.json` | **somente** `dataset/corpus.json` |
+> | Quebra de linha | acento grave `` ` `` ao fim da linha | contrabarra `\` ao fim da linha |
+> | Variável de ambiente | `$env:OLLAMA_MODEL = "qwen2.5:3b"` | `export OLLAMA_MODEL=qwen2.5:3b` |
+> | Cliente HTTP | `curl.exe` — no PowerShell 5.1, `curl` é apelido de `Invoke-WebRequest` e tem outra sintaxe | `curl` |
+>
+> **A pegadinha mais comum.** No Git Bash, a contrabarra é caractere de escape, não
+> separador de caminho: `--corpus dataset\corpus.json` chega ao Python como
+> `datasetcorpus.json` e o programa aborta com `FileNotFoundError`. Caminhos copiados do
+> Explorador de Arquivos do Windows vêm com contrabarra e precisam ser convertidos.
+
 ### 3.1 Subir a aplicação
 
 Na raiz do repositório:
@@ -125,6 +145,9 @@ Aguarde até o *backend* responder. Confirme com:
 ```bash
 curl http://localhost:8000/docs
 ```
+
+No PowerShell, use `curl.exe http://localhost:8000/docs` — ou abra o endereço no
+navegador, que serve igualmente como verificação.
 
 **No Linux**, o Ollama não é alcançável por `host.docker.internal`. Crie um arquivo
 `.env` na raiz antes de subir:
@@ -183,29 +206,78 @@ Sem `--index-mode`, o comportamento permanece idêntico ao original.
 
 ### 3.5 Executar
 
+A ferramenta é chamada **a partir da raiz do repositório**, nunca de dentro de
+`benchmark/` — ver a observação sobre *namespace package* em 3.3.
+
+#### Teste de fumaça — faça antes da execução completa
+
+Cinco consultas, uma configuração, poucos minutos. Confirma que o *backend* responde, que
+a ingestão do corpus conclui, que o roteamento das consultas funciona e que o mecanismo de
+contingência é acionado — sem esperar as horas da execução completa.
+
+O arquivo `dataset/queries-smoke.json` traz uma consulta de cada documento mais uma fora
+da base. Na raiz do repositório:
+
+```bash
+python -m benchmark.cli run --corpus dataset/corpus.json --queries dataset/queries-smoke.json --corpus-root dataset --api http://localhost:8000 --chunking medio --configs A --out-dir benchmark/runs/smoke-consolidado --tag smoke --index-mode consolidado
+```
+
+E, se a condição segmentada for rodar — é o caminho de código acrescentado pelo patch de
+3.4, vale exercitá-lo:
+
+```bash
+python -m benchmark.cli run --corpus dataset/corpus.json --queries dataset/queries-smoke.json --corpus-root dataset --api http://localhost:8000 --chunking medio --configs A --out-dir benchmark/runs/smoke-segmentado --tag smoke --index-mode segmentado
+```
+
+O que verificar na saída:
+
+| Sinal | Consolidado | Segmentado |
+|---|---|---|
+| Agentes criados | uma linha `agente _todos: … — corpus ingerido` | **quatro** linhas: `cdc`, `lgpd`, `mei`, `pix` |
+| Destino das consultas | todas com `-> _todos ok` | cada uma no agente do seu documento |
+| Linhas `sem agente de destino, pulada` | nenhuma | nenhuma |
+| `foratudo-001` | deve cair na resposta de contingência | idem |
+
+Uma linha `sem agente de destino, pulada` indica que o campo `target_document` não chegou
+ao modelo de dados: o patch em `dataset/schema.py` (3.4) não foi aplicado, e o Pydantic
+descartou o campo silenciosamente.
+
+A ingestão é a parte demorada — 211 páginas de *embeddings*. No modo segmentado ela ocorre
+quatro vezes, uma por agente, de modo que o segundo comando leva mais tempo que o primeiro
+ainda que as consultas sejam as mesmas.
+
+#### Execução completa
+
 ```bash
 cd benchmark
 python run_experimento.py --api http://localhost:8000
 ```
 
-O orquestrador captura a especificação do ambiente, verifica a GPU, copia o *dataset*
-para dentro da pasta da execução e roda as duas condições em pastas separadas.
+O orquestrador captura a especificação do ambiente, verifica a GPU, copia o *dataset* para
+dentro da pasta da execução e roda as duas condições em pastas separadas. É o único
+comando que se chama de dentro de `benchmark/`: ele próprio executa a CLI com a raiz do
+repositório como diretório de trabalho.
 
 Opções úteis:
 
 ```bash
-# só uma das condições
-python run_experimento.py --condicoes consolidado
-
-# outro perfil de segmentação
-python run_experimento.py --chunking pequeno
+python run_experimento.py --condicoes consolidado    # só uma das condições
+python run_experimento.py --chunking pequeno         # outro perfil de segmentação
 ```
 
-Para rodar a ferramenta diretamente, sem o orquestrador, **a partir da raiz do
-repositório** — não de dentro de `benchmark/`:
+#### Chamando a ferramenta diretamente
+
+Sem o orquestrador, para controlar cada parâmetro. Na raiz do repositório, em uma linha —
+forma que funciona em qualquer terminal:
 
 ```bash
-cd rag-platform-poc
+python -m benchmark.cli run --corpus dataset/corpus.json --queries dataset/queries-consolidado.json --corpus-root dataset --api http://localhost:8000 --chunking medio --configs A B C F --index-mode consolidado --out-dir benchmark/runs/teste_consolidado
+```
+
+A mesma chamada quebrada em várias linhas, para leitura — **Git Bash, WSL, Linux, macOS**
+(contrabarra ao fim da linha):
+
+```bash
 python -m benchmark.cli run \
     --corpus dataset/corpus.json \
     --queries dataset/queries-consolidado.json \
@@ -217,14 +289,28 @@ python -m benchmark.cli run \
     --out-dir benchmark/runs/teste_consolidado
 ```
 
-Rodar de dentro de `benchmark/` produz `No module named benchmark` — o diretório
-`benchmark/` precisa estar visível a partir do diretório de trabalho para o
-*namespace package* resolver.
+E em **PowerShell** (acento grave ao fim da linha):
+
+```powershell
+python -m benchmark.cli run `
+    --corpus dataset/corpus.json `
+    --queries dataset/queries-consolidado.json `
+    --corpus-root dataset `
+    --api http://localhost:8000 `
+    --chunking medio `
+    --configs A B C F `
+    --index-mode consolidado `
+    --out-dir benchmark/runs/teste_consolidado
+```
+
+Rodar de dentro de `benchmark/` produz `No module named benchmark`: o diretório
+`benchmark/` precisa estar visível a partir do diretório de trabalho para o *namespace
+package* resolver.
 
 > **Atenção.** O `raw.jsonl` é aberto em modo de acréscimo. Rodar duas vezes apontando
-> para a mesma pasta de saída duplica os registros e corrompe as métricas. O
-> orquestrador cria uma pasta nova a cada execução; se chamar a CLI diretamente, use
-> sempre um `--out-dir` inédito.
+> para a mesma pasta de saída duplica os registros e corrompe as métricas. O orquestrador
+> cria uma pasta nova a cada execução; se chamar a CLI diretamente, use sempre um
+> `--out-dir` inédito — inclusive ao repetir o teste de fumaça.
 
 ---
 
@@ -368,14 +454,23 @@ contêiner do *backend* ficou sem memória e foi reiniciado. Verifique com
 persistir com GPU ativa, aumente o `timeout` em `AblationRunner.__init__`.
 
 **`No module named benchmark`.** Você está chamando a CLI de dentro de `benchmark/`.
-Volte para a raiz do repositório — ver 3.5.
+Volte para a raiz do repositório — ver 3.5. A exceção é o `run_experimento.py`, que é
+chamado de dentro de `benchmark/` justamente por cuidar disso sozinho.
 
-**Para testar o fluxo rapidamente**, rode uma configuração só e uma condição só:
+**`FileNotFoundError: 'datasetcorpus.json'`** (ou qualquer caminho com as barras
+desaparecidas). Você está no Git Bash e passou o caminho com contrabarra, que ali é
+caractere de escape. Troque `dataset\corpus.json` por `dataset/corpus.json` — ver as
+convenções de terminal no início do capítulo 3.
 
-```bash
-python run_experimento.py --condicoes consolidado
-# e edite CONFIGS no topo de run_experimento.py para ["A"]
-```
+**`unrecognized arguments: --index-mode`.** O patch de 3.4 não foi aplicado neste clone.
+Sem ele, só a condição consolidada roda, e sem o argumento.
+
+**Linhas `sem agente de destino, pulada` no modo segmentado.** O patch foi aplicado em
+`cli.py` e `ablation/runner.py`, mas não em `dataset/schema.py`: sem o campo
+`target_document` no modelo, o Pydantic descarta o destino de cada consulta.
+
+**Para testar o fluxo rapidamente**, use o teste de fumaça de 3.5: cinco consultas, uma
+configuração, poucos minutos.
 
 ---
 

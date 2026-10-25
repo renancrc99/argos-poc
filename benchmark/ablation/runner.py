@@ -65,8 +65,29 @@ class AblationRunner:
     def _delete_agent(self, agent_id: str) -> None:
         self._client.delete(f"/agents/{agent_id}")
 
-    def _ingest_corpus(self, agent_id: str, corpus: Corpus, chunking_profile: str) -> None:
+    @staticmethod
+    def _detalhe_do_erro(resp: httpx.Response) -> str:
+        """Extrai o `detail` do corpo da resposta de erro da API.
+
+        O `raise_for_status` do httpx descarta o corpo, e é nele que o backend diz
+        qual dependência falhou (S3 do LocalStack, Ollama, banco). Sem isso, um 502
+        de ingestão é indistinguível de um 502 de geração."""
+        try:
+            corpo = resp.json()
+            if isinstance(corpo, dict) and "detail" in corpo:
+                return str(corpo["detail"])[:800]
+        except Exception:
+            pass
+        return (resp.text or "<corpo vazio>")[:800]
+
+    def _ingest_corpus(self, agent_id: str, corpus: Corpus, chunking_profile: str) -> list[dict]:
+        """Ingere o corpus e devolve um registro por documento.
+
+        O número de segmentos gerados é o eixo da caracterização do tempo de busca
+        frente ao volume indexado: sem ele, a comparação entre as condições de índice
+        não tem grandeza no eixo x."""
         profile = CHUNKING_PROFILES[chunking_profile]
+        registros: list[dict] = []
         for doc in corpus.documents:
             path = self._corpus_root / doc.path
             with open(path, "rb") as f:
@@ -79,7 +100,22 @@ class AblationRunner:
                     f"/agents/{agent_id}/documents", files=files, data=data,
                     headers={"X-Benchmark": "true"},
                 )
-                resp.raise_for_status()
+            if resp.status_code >= 400:
+                raise RuntimeError(
+                    f"falha ao ingerir '{doc.id}' ({path.name}) no agente {agent_id}: "
+                    f"HTTP {resp.status_code} — {self._detalhe_do_erro(resp)}"
+                )
+            corpo = resp.json() if resp.content else {}
+            registros.append({
+                "documento": doc.id,
+                "arquivo": path.name,
+                "bytes": path.stat().st_size,
+                "segmentos": corpo.get("chunks_created"),
+                "status": corpo.get("status"),
+            })
+            print(f'    documento {doc.id} ({path.name}): '
+                  f'{corpo.get("chunks_created")} segmentos', file=sys.stderr)
+        return registros
 
     def _chat(self, agent_id: str, message: str) -> dict:
         resp = self._client.post(
@@ -87,7 +123,11 @@ class AblationRunner:
             json={"message": message},
             headers={"X-Benchmark": "true"},
         )
-        resp.raise_for_status()
+        if resp.status_code >= 400:
+            raise RuntimeError(
+                f"falha na interação com o agente {agent_id}: "
+                f"HTTP {resp.status_code} — {self._detalhe_do_erro(resp)}"
+            )
         return resp.json()
 
     def run(
@@ -111,6 +151,9 @@ class AblationRunner:
         else:
             buckets = {"_todos": corpus}
 
+        ingestao: list[dict] = []
+        ingestao_path = out_path.parent / "ingestao.json"
+
         with open(out_path, "a", encoding="utf-8") as out_file:
             for config_letter in configs:
                 print(f"\n=== Configuração {config_letter} ({index_mode}) ===", file=sys.stderr)
@@ -120,8 +163,23 @@ class AblationRunner:
                         sufixo = f"{run_tag} {bucket_id}".strip()
                         agente = self._create_agent(config_letter, sufixo)
                         agentes[bucket_id] = agente
-                        self._ingest_corpus(agente, bucket_corpus, chunking_profile)
-                        print(f"  agente {bucket_id}: {agente} — corpus ingerido", file=sys.stderr)
+                        docs = self._ingest_corpus(agente, bucket_corpus, chunking_profile)
+                        total = sum(d["segmentos"] or 0 for d in docs)
+                        ingestao.append({
+                            "config": config_letter,
+                            "index_mode": index_mode,
+                            "bucket": bucket_id,
+                            "agente": agente,
+                            "chunking_profile": chunking_profile,
+                            "segmentos_no_indice": total,
+                            "documentos": docs,
+                        })
+                        ingestao_path.write_text(
+                            json.dumps(ingestao, ensure_ascii=False, indent=2), encoding="utf-8")
+                        print(f"  agente {bucket_id}: {agente} — {total} segmentos no índice",
+                              file=sys.stderr)
+
+                    self._aquecer(agentes, buckets, query_set)
 
                     for query in query_set.queries:
                         bucket = self._bucket_da_consulta(query, buckets)
@@ -141,6 +199,31 @@ class AblationRunner:
                 finally:
                     for agente in agentes.values():
                         self._delete_agent(agente)
+
+    def _aquecer(self, agentes: dict[str, str], buckets: dict, query_set: QuerySet) -> None:
+        """Dispara uma interação descartada antes de começar a medir.
+
+        A primeira chamada ao modelo de linguagem numa sessão paga o carregamento dos
+        pesos na GPU e o aquecimento dos kernels — custo que não pertence a nenhuma
+        consulta em particular. Sem este descarte, a primeira configuração executada,
+        e principalmente a primeira condição de índice, absorve esse custo sozinha:
+        seus tempos ficam inflados e a comparação entre condições deixa de ser válida.
+
+        O resultado é descartado: não entra no raw.jsonl nem em nenhuma estatística.
+        Uma falha aqui não interrompe a execução, apenas é reportada — se o backend
+        estiver realmente indisponível, a primeira consulta medida falhará em seguida
+        com o diagnóstico completo.
+        """
+        if not query_set.queries:
+            return
+        query = query_set.queries[0]
+        bucket = self._bucket_da_consulta(query, buckets) or next(iter(agentes))
+        try:
+            self._chat(agentes[bucket], query.text)
+            print("    interação de aquecimento concluída (descartada)", file=sys.stderr)
+        except Exception as e:
+            print(f"    AVISO: aquecimento falhou ({e}); os tempos da primeira "
+                  "consulta podem estar inflados", file=sys.stderr)
 
     @staticmethod
     def _bucket_da_consulta(query, buckets: dict) -> str | None:
