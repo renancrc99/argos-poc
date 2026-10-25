@@ -37,3 +37,7 @@ htmlcov/
 # Sistema operacional
 .DS_Store
 Thumbs.db
+
+# Saída das execuções de benchmark
+benchmark/runs/*
+!benchmark/runs/.gitkeep

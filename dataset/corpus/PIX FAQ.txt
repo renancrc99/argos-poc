@@ -1,0 +1,153 @@
+​O que é Pix?
+Pix é um novo meio de pagamentos do Banco Central que permite a realização de transferências e pagamentos de valores financeiros em tempo real, 24h por dia, 7 dias por semana e 365 dias por ano. Com o Pix, o dinheiro cai na hora! Pix também é o nome da própria transação.
+
+​Preciso me cadastrar para usar o Pix?
+Não. Para enviar ou receber um Pix, você precisa ter uma conta bancária. Porém, para deixar tudo mais fácil, você pode cadastrar uma chave Pix, que é um código que você utilizará durante as suas transações. A chave Pix pode ser seu CPF, telefone celular, e-mail, chave aleatória ou um QR Code (parecido com um código de barras). Você cadastra suas chaves Pix no aplicativo CAIXA ou CAIXA Tem ou no Internet Banking CAIXA pelo computador.
+
+​O que é uma chave Pix?
+A chave Pix é um código que torna o processo de enviar e receber dinheiro muito mais fácil. Para enviar ou receber dinheiro, não será mais necessário informar todos os dados da conta. Basta informar a chave Pix cadastrada! A chave Pix pode ser seu CPF, telefone celular, e-mail, chave aleatória ou um QR Code (parecido com um código de barras). A chave aleatória é gerada automaticamente pela CAIXA, seguindo as regras do Banco Central.
+
+​Preciso de uma chave Pix cadastrada para receber ou enviar valores Pix?
+Não. A chave Pix não é obrigatória. Porém, para receber um Pix de forma simplificada sem utilizar todos os seus dados bancários, você precisa ter a chave Pix cadastrada. A chave Pix pode ser seu CPF, telefone celular, e-mail, chave aleatória ou um QR Code (parecido com um código de barras).
+Você pode cadastrar uma chave Pix nos aplicativos CAIXA e CAIXA Tem, no Internet Banking, no caixa eletrônico ou na Central de Atendimento pelos números 4004-0104 (capitais e regiões metropolitanas) e 0800-104-0104 (demais regiões). A chave Pix também pode ser cadastrada em qualquer agência.
+
+
+​Para quem eu posso enviar um Pix?
+O Pix está disponível para todos! Você pode realizar transferências e pagamentos para pessoas físicas, empresas e entes governamentais, assim como receber transações. É fácil e rápido!
+
+​É seguro enviar e receber um Pix?
+Sim, fique tranquilo. O Pix é tão seguro como fazer um TED ou DOC. As transações Pix são criptografas e possuem camada de segurança nos dados de autenticação. Além disso, as informações pessoais dos clientes também estão protegidas pela Lei do Sigilo Bancário e pela Lei Geral de Proteção de Dados (LGPD).
+
+​É possível pedir a devolução de um Pix?
+Sim. A devolução é uma funcionalidade disponível no Pix, desde que iniciada por quem recebeu o dinheiro, dentro do período de 90 dias.
+
+​Posso cobrar alguém usando Pix?
+Sim. Acesse a área do Pix nos aplicativos CAIXA e CAIXA Tem ou Internet Banking e selecione a opção “Receber”. Na próxima tela, escolha o tipo de chave e digite um nome identificador para a transação. Você pode digitar um valor ou pode gerar um código de recebimento sem valor específico. Após gerar o QR Code, basta compartilhar a imagem ou o código gerado para receber um Pix.
+
+​Pix é um novo aplicativo?
+Não. O Pix é um novo meio de pagamento criado pelo Banco Central e está disponível no Internet Banking e nos aplicativos CAIXA e CAIXA Tem.
+
+
+
+​Onde consulto as minhas transações Pix?
+Você pode consultar as transações Pix por meio do Extrato Pix detalhado ou pelo seu extrato da conta. Caso tenha dúvidas sobre uma transação, verifique o extrato da conta para saber se ela foi concluída.
+
+​Posso contestar uma transação Pix?
+Caso você desconheça uma transação Pix enviada de sua conta, você pode contestar nos aplicativos App CAIXA ou CAIXA Tem. Abra seu aplicativo no Menu Pix, ou dentro do extrato Pix, encontre a transação que quer contestar e é só clicar no botão de contestação e seguir as instruções.
+
+Se preferir, ligue no 0800 726 0101 ou vá a qualquer agência CAIXA para realizar o procedimento de contestação de movimentação Pix na sua conta.
+
+​
+​O que é a portabilidade e a reivindicação de chaves Pix?
+Você pode fazer portabilidade (transferir) as chaves Pix que tenha cadastrado em outro banco para sua conta na CAIXA e vice-versa. A portabilidade deve ser solicitada na instituição onde você deseja fazer o registro e depois deve ser confirmada na instituição que irá enviar as chaves de origem. Você tem até 7 dias para confirmar a portabilidade, quando solicitada.
+
+Você pode reivindicar a posse de uma chave Pix caso você tente registrar uma chave que já esteja registrada por outra pessoa. Neste caso, a pessoa que detém a chave será notificada para confirmar ou cancelar a transferência da posse.
+
+
+​Existe limite diário de quantidade para realização de Pix?
+Você pode realizar quantas transações Pix quiser, respeitando os limites de valores estabelecidos para cada situação e para sua conta.
+
+​Consigo aumentar o valor do meu limite diário para transação Pix?
+Sim! Caso você utilize o app CAIXA para enviar Pix, você pode aumentar o limite diário aderindo à solução Mobile Forte. Basta fazer a adesão no aplicativo CAIXA pelo seu smartphone e concluir o processo de habilitação um caixa eletrônico ou na sua agência de relacionamento.
+
+Fique ligado: os limites diários aumentados por meio da adesão ao Mobile Forte podem ser utilizados em transações Pix realizadas apenas pelo smartphone cadastrado.
+
+
+Passo a Passo
+
+Adesão ao Mobile Forte
+
+Efetue login no App CAIXA
+Acesse "senhas e configurações"
+Localize "Gerenciar  Dispositivos" e "Alterar Limites"
+Clique na opção “Aumentar Limites”
+Clique em “confirmar”
+Clique em “ok” e vá até o caixa eletrônico para habilitar o dispositivo.
+Validação no caixa eletrônico
+
+Insira o cartão da conta
+Selecione “Desbloqueio de Celular/Computador”
+Digite no nº do dispositivo que deseja validar
+Selecione “Confirmar”
+Pronto! Seu dispositivo está validado.
+
+Qual é o limite das operações com Pix?
+Confira abaixo os limites diários de transferências com o Pix por faixas de horário e canais de atendimento:
+
+celula 1.jpg
+​
+celula 2.jpg
+celula 3.jpg
+celula 4.jpg
+Período Diurno
+Podendo compreender das
+06h às 20h ou 06h às 22h
+​Pessoa Física
+a partir de
+R$3.000
+a partir de
+R$10.000
+R$1.200
+​Pessoa Jurídica
+​R$5.000
+​R$60.000
+​
+​
+​	​	​	​
+Período Noturno
+Podendo compreender das
+20h às 06h ou 22h às 06h	​Pessoa Física
+R$1.000
+R$1.000
+R$1.000
+​Pessoa Jurídica
+​R$5.000
+​R$60.000
+​
+​
+​	​
+​
+​
+Envios para mesma titularidade
+Todos os horários
+​Pessoa Física
+R$10.000
+R$30.000
+R$1.200
+​Pessoa Jurídica
+​R$10.000
+​R$60.000
+​
+1- Refere-se à solução Mobile Forte. 
+
+
+
+Validando o seu dispositivo móvel, você poderá realizar transações com limites mais altos. Para saber mais sobre a solução Mobile Forte, clique aqui.
+
+
+Consigo aumentar o valor do meu limite diário para contas ou chaves pré-determinadas?
+Sim! Caso você utilize o app CAIXA para enviar Pix, você pode aumentar o limite diário para contas ou chaves pré-determinadas. Conforme a Resolução BACEN nº 142/21 os pedidos serão processados entre 24h e 48h.
+
+Passo a Passo
+
+Efetue login no App CAIXA
+Acesse a opção "Pix"
+Clique em “Meus Limites”
+Clique na opção “Cadastrar Conta Pix”
+Clique no botão “Cadastrar Nova Conta”
+Selecione a opção “Chave Pix” ou “Dados bancários” conforme sua preferência
+Preencha os dados solicitados e clique em “Continuar”
+Confirme os dados preenchidos para receber o código de segurança por SMS
+Informe sua senha de transação para finalizar o pedido
+
+Consigo alterar o início do horário noturno para o Pix?
+Sim! Você pode alterar o início do horário noturno que começa às 20h para 22h. Caso decida retornar ao horário inicial das 20h também é possível. Conforme a Resolução BACEN nº 142/21 os pedidos serão processados entre 24h e 48h.
+
+Passo a Passo
+
+Efetue login no App CAIXA
+Acesse a opção "Pix"
+Clique em “Meus Limites”
+Clique na opção “Período noturno”
+Selecione a opção de preferência (20h ou 22h) e clique em “Continuar”
+Informe sua senha de transação para finalizar o pedido
